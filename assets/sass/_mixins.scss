@@ -1,0 +1,42 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+
+@mixin border-radius($radius)
+{
+  border-radius: $radius;
+}
+@mixin button-style($background-color, $border-color, $color)
+{
+  background-color: $background-color;
+  border-color: $border-color;
+  color: $color;
+}
+@mixin button-focus($background-color, $color)
+{
+  &:focus
+  {
+    box-shadow: 0 0 0 0.2rem rgba($background-color, 0.5);
+  }
+  &:not(:disabled):not(.disabled):active, &:hover
+  {
+    background-color: lighten($background-color, 10%);
+    border-color: lighten($background-color, 10%);
+    color: $color;
+  }
+}
+
+@mixin headings {
+  h1, h2, h3,
+  h4, h5, h6 {
+    @content;
+  }
+}
+
+@mixin text {
+  p, a, h1, h2, h3,
+  h4, h5, h6 {
+    @content;
+  }
+}

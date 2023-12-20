@@ -1,0 +1,360 @@
+@import "assets/sass/hamburgers.css";
+@import "assets/sass/daktheme.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&display=swap");
+.banner--container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.banner--container h1 {
+  font-size: clamp(8rem, 25vw, 30vw);
+  text-align: center;
+}
+.banner--container #changingText {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+section .snippet-selector ul {
+  list-style: none;
+  padding: 0;
+}
+section .snippet-selector ul li {
+  padding: 0;
+  margin-right: 15px;
+  padding-right: 15px;
+  border-right: 2px solid rgba(33, 37, 41, 0.7098039216);
+}
+section .snippet-selector ul a {
+  text-decoration: none;
+  color: #212529;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+section .code-wrapper {
+  visibility: hidden;
+}
+section #wrap-one {
+  visibility: visible;
+}
+
+#target2 {
+  position: relative;
+  left: -100vw;
+  opacity: 0;
+}
+
+#target1 {
+  position: relative;
+  right: -100vw;
+}
+
+#target3 {
+  margin: 0 auto;
+  transition: all ease-in-out 0.6s;
+  max-width: 0vw;
+  overflow: hidden;
+  height: 500px;
+}
+
+#target4 {
+  margin: 50px auto;
+  transition: all ease-in-out 0.6s;
+  max-height: 0px;
+  overflow: hidden;
+}
+
+#target5 {
+  position: relative;
+  width: 100%;
+  opacity: 0;
+  top: -150px;
+  filter: saturate(0);
+  transition: all ease-in-out 0.5s;
+}
+
+.fly-right {
+  position: relative !important;
+  transition: all 0.3s ease-in-out;
+  inset: 0 0 0 0 !important;
+  margin-right: -100vw !important;
+}
+.fly-right.fly-right-in {
+  right: 0;
+  inset: 0 0 0 0 !important;
+  margin-right: 0 !important;
+}
+
+.fly-right-out {
+  position: relative !important;
+  right: -100vw !important;
+  transition: cubic-bezier(0.23, 1, 0.32, 1) all 0.5s;
+}
+.fly-right-out.fly-right-over {
+  right: 0 !important;
+}
+
+.fly-left-out {
+  position: relative !important;
+  left: -100vw !important;
+  transition: cubic-bezier(0.23, 1, 0.32, 1) all 0.5s;
+}
+.fly-left-out.fly-left-over {
+  left: 0 !important;
+}
+
+#item1, #item3, #item5, #item7 {
+  transform: translateX(-150%);
+}
+
+/* starts off-screen to the left */
+#item2, #item4, #item6 {
+  transform: translateX(150%);
+}
+
+/* starts off-screen to the right */
+.col-lg-8 {
+  overflow: hidden;
+}
+
+.fade-in {
+  opacity: 1 !important;
+  transition: opacity 0.35s ease-in-out;
+  left: 0 !important;
+}
+
+.scrollmagic-pin-spacer {
+  margin-top: 1rem;
+}
+
+.animation-two {
+  display: flex;
+  justify-content: center;
+}
+.animation-two #Lottie {
+  width: 50%;
+}
+
+.gallery-wrapper {
+  margin: 200px auto;
+}
+.gallery-wrapper .col-lg-3 {
+  overflow: hidden;
+}
+.gallery-wrapper .col-lg-3 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 10px 0;
+}
+
+.fish {
+  max-width: 600px !important;
+}
+
+.about-me-text {
+  position: relative !important;
+  inset: 0 !important;
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out;
+}
+
+#point1,
+#thanks,
+#howdy {
+  opacity: 0;
+}
+
+#point4 {
+  left: 0 !important;
+  top: 0 !important;
+}
+
+#point6 {
+  height: 600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("http://personal.local/wp-content/uploads/2023/12/IMG_4173-scaled.jpeg");
+}
+
+.text-only-container {
+  text-align: center;
+}
+
+.gallery .row {
+  margin: 25px 0;
+}
+.gallery .row .col-lg-4 {
+  transition: all ease-in-out 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.gallery .row .col-lg-4 .pad-wrap {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) all 0.45s;
+}
+.gallery .row .col-lg-4 .imarg {
+  opacity: 0;
+  position: absolute;
+  transition: cubic-bezier(0.23, 1, 0.32, 1) all 0.5s;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallery .row .col-lg-4:hover .pad-wrap {
+  transform: scale(0.95);
+}
+.gallery .row .col-lg-4:hover .imarg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: 1;
+  color: #fff;
+  z-index: 99;
+}
+.gallery .row .col-lg-4:hover img {
+  filter: brightness(0.2);
+}
+.gallery .row .col-lg-4 img {
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section pre {
+  border-radius: 5px !important;
+}
+section pre .token.operator {
+  background: none !important;
+}
+section.resources #target7 li {
+  opacity: 0;
+  left: -100px;
+  position: relative;
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+section.resources ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+section.resources ul li {
+  padding: 25px 0;
+  border-bottom: 2px solid rgba(33, 37, 41, 0.7098039216);
+  opacity: 0.5;
+}
+section.resources ul li:hover {
+  cursor: pointer;
+}
+section.resources ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #212529;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.hidden path#i,
+.hidden path#c,
+.hidden path#k,
+.hidden path#e,
+.hidden path#r,
+.hidden path#i2,
+.hidden path#e,
+.hidden path#e2,
+.hidden path#o,
+.hidden path#n,
+.hidden path#g {
+  opacity: 0;
+  width: 0;
+}
+.hidden path#j,
+.hidden path#p,
+.hidden path#i,
+.hidden path#c,
+.hidden path#k,
+.hidden path#e,
+.hidden path#r,
+.hidden path#i2,
+.hidden path#e,
+.hidden path#e2,
+.hidden path#o,
+.hidden path#n,
+.hidden path#g {
+  transition: 0.5s all ease-in-out;
+}
+
+/* Add styles for the fixed header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 9;
+}
+header svg {
+  width: 200px;
+}
+header .hamburger-inner, header .hamburger-inner::before, header .hamburger-inner::after {
+  border-radius: 20px;
+}
+header .hamburger {
+  padding-right: 0 !important;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  body, html {
+    overflow-x: hidden;
+  }
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.5rem, 6vw, 15vw);
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 13px;
+}
+
+.img-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.img-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}/*# sourceMappingURL=style.css.map */

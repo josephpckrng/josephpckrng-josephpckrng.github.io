@@ -1,0 +1,56 @@
+
+
+.hidden {
+
+    path#i,
+    path#c,
+    path#k,
+    path#e,
+    path#r,
+    path#i2,
+    path#e,
+    path#e2,
+    path#o,
+    path#n,
+    path#g {
+        opacity: 0;
+        width: 0;
+    }
+    path#j,
+    path#p,
+    path#i,
+    path#c,
+    path#k,
+    path#e,
+    path#r,
+    path#i2,
+    path#e,
+    path#e2,
+    path#o,
+    path#n,
+    path#g {
+        transition: 0.5s all ease-in-out;
+    }
+
+}
+
+/* Add styles for the fixed header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color:rgb(255 255 255 / 98%);
+    z-index: 9;
+    svg {
+        width: 200px;
+    }
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+        border-radius: 20px;
+    }
+    .hamburger {
+        padding-right: 0 !important;
+    }
+}
+
